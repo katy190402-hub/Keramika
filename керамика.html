@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Осетинская керамика и орнамент | Уроки труда (технология) 5-7 класс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fef7e8;
+            color: #2c2418;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --clay: #c46d3a;
+            --clay-dark: #9b4e24;
+            --terracotta-light: #f2d5b5;
+            --bg-warm: #fff6ea;
+            --sand: #e9d6bd;
+            --ink: #2e241f;
+            --accent-blue: #2c7a7b;
+            --golden: #d4a373;
+            --deep-red: #aa4e2c;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2e241f 0%, #4a3527 100%);
+            color: #fff1e0;
+            padding: 24px 0 20px;
+            border-bottom: 4px solid var(--clay);
+        }
+
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.9rem;
+            letter-spacing: -0.3px;
+            font-weight: 700;
+        }
+
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin-top: 6px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #fff1e0;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a:hover {
+            border-bottom-color: var(--clay);
+            color: #ffdfb3;
+        }
+
+        .hero {
+            background: linear-gradient(112deg, var(--bg-warm) 0%, #f7e9d7 100%);
+            padding: 48px 0 56px;
+            border-bottom: 1px solid #e9cfae;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .hero-text h2 {
+            font-size: 2.4rem;
+            font-family: 'Merriweather', serif;
+            color: #5e3a28;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            margin-bottom: 24px;
+            color: #3e2c21;
+        }
+
+        .hero-badge {
+            background: var(--clay);
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-img {
+            flex: 1;
+            text-align: center;
+            background: #e9cfae;
+            border-radius: 48px 24px 48px 24px;
+            padding: 16px;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-family: 'Merriweather', serif;
+            color: #5e3a28;
+            text-align: center;
+            margin-bottom: 48px;
+            position: relative;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--clay);
+            margin: 14px auto 0;
+            border-radius: 4px;
+        }
+
+        .cards-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 32px;
+            overflow: hidden;
+            flex: 1;
+            min-width: 240px;
+            max-width: 320px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+            border: 1px solid #f0e0cc;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card-icon {
+            background: var(--terracotta-light);
+            padding: 28px 0 16px;
+            text-align: center;
+            font-size: 3rem;
+        }
+        .card-content {
+            padding: 24px 20px 28px;
+        }
+        .card-content h3 {
+            font-size: 1.5rem;
+            color: #7b4a2e;
+            margin-bottom: 12px;
+        }
+        .symbol-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .symbol-item {
+            background: white;
+            border-radius: 28px;
+            padding: 20px;
+            width: 210px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            transition: all 0.2s;
+        }
+        .symbol-shape {
+            font-size: 3rem;
+            background: #faeedf;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 60px;
+            margin: 0 auto 16px;
+        }
+        .type-badge {
+            background: #dabf9b;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #3b2a1f;
+            margin-bottom: 8px;
+        }
+        .myth-block {
+            background: #f4ecdf;
+            border-radius: 48px;
+            padding: 32px;
+            margin-top: 24px;
+        }
+        
+        /* Практическая работа */
+        .practical-block {
+            background: #e9ddce;
+            border-radius: 48px;
+            padding: 32px 28px;
+            margin-top: 20px;
+        }
+        .practical-step {
+            background: white;
+            border-radius: 28px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border-left: 6px solid var(--clay);
+        }
+        .practical-step h3 {
+            color: #7b4a2e;
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+        }
+        .example-patterns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            margin: 24px 0;
+        }
+        .pattern-card {
+            background: #fff8ef;
+            border-radius: 24px;
+            padding: 16px;
+            text-align: center;
+            width: 160px;
+            border: 1px solid #e2cbaa;
+        }
+        .pattern-symbol {
+            font-size: 3.2rem;
+            margin-bottom: 8px;
+        }
+        .quiz-block {
+            background: #e9ddce;
+            border-radius: 48px;
+            padding: 32px 28px;
+            margin-top: 20px;
+        }
+        .quiz-question {
+            background: white;
+            border-radius: 32px;
+            padding: 24px;
+            margin-bottom: 28px;
+        }
+        .quiz-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        .quiz-btn {
+            background: #f2e3d4;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 60px;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.1s;
+        }
+        .quiz-btn:hover {
+            background: var(--clay);
+            color: white;
+        }
+        .quiz-feedback {
+            margin-top: 12px;
+            font-style: italic;
+        }
+        .correct-feedback {
+            color: #2c7a7b;
+            font-weight: 500;
+        }
+        .wrong-feedback {
+            color: #bc5a2c;
+            font-weight: 500;
+        }
+        .teacher-tips {
+            background: #fff2e4;
+            border-radius: 40px;
+            padding: 32px;
+            border-left: 8px solid var(--clay);
+        }
+        footer {
+            background: #2c2418;
+            color: #e2cfb3;
+            padding: 32px 0;
+            text-align: center;
+            margin-top: 24px;
+        }
+        @media (max-width: 700px) {
+            .hero-text h2 { font-size: 1.9rem; }
+            .section-title { font-size: 1.8rem; }
+        }
+        .quote-text {
+            font-style: italic;
+            border-left: 4px solid var(--clay);
+            padding-left: 20px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        .task-list {
+            margin-left: 24px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+        .task-list li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+        <div class="logo">
+            <h1>🏺 Керамика Осетии</h1>
+            <p>Технология | Орнамент как код культуры | 5–7 классы</p>
+        </div>
+        <div class="nav-links">
+            <a href="#meaning">Смыслы орнамента</a>
+            <a href="#symbols">Символы</a>
+            <a href="#practical">Практикум</a>
+            <a href="#quiz">Проверь себя</a>
+            <a href="#teachers">Учителю</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="hero-badge"> Урок труда (технология) | Декоративно-прикладное искусство</div>
+                <h2>Орнамент осетинской керамики: язык древних символов</h2>
+                <p>Каждая линия, ромб или спираль на глиняном сосуде — не просто украшение, а мифологический образ. Узнайте, как читать священные узоры и создавать свои изделия по традиционным канонам.</p>
+            </div>
+            <div class="hero-img">
+                <img src="https://grizly.club/uploads/posts/2022-12/1671861358_grizly-club-p-osetinskii-kuvshin-s-ornamentom-1.jpg" alt
+                    <path d="M100,50 L150,50 L200,90 L90,90 L100,50Z" fill="#CD7A42" stroke="#8B4513" stroke-width="2"/>                   
+                    <text x="120" y="225" font-size="10" fill="#5A3A28">Керамика осетин</text>
+                </img>
+            </div>
+        </div>
+    </div>
+
+    <!-- Орнамент как модель мира -->
+    <section id="meaning">
+        <div class="container">
+            <h2 class="section-title">🌍 Орнамент — модель мира</h2>
+            <div class="myth-block">
+                <p><strong>Осетинский орнамент — это не просто декор, а священная система знаков.</strong> Время безжалостно к культурам, всего за сто с лишним лет люди перестали понимать многое из того, что было стройной системой традиционной осетинской культуры и не только. Ключевой элемент – народный орнамент, который визуально создавал модель мира. Он неразрывно связан с религиозной символикой, верованиями, веками зашифрованными в «священных» узорах. Этими композициями украшали праздничную одежду, дома, посуду и даже надгробия – все, что использовалось в обрядах (свадебных, похоронных, ритуальных) и сопровождало человека на протяжении жизни.</p>
+                <div class="quote-text">
+                    ✨ «Ключевой элемент – народный орнамент, который визуально создавал модель мира. Он неразрывно связан с религиозной символикой, верованиями, веками зашифрованными в "священных" узорах».
+                </div>
+                <p>Корни орнамента уходят в древние культуры: <strong>Кобанскую, Скифо-Сарматскую и Аланскую</strong>. Древнейшие узоры на глиняных сосудах (середина II тысячелетия до н.э.) — это вдавленные точки, зигзаги, спирали и параллельные линии. В основе любого традиционного орнамента лежат главные священные символы культуры: образ божественной женщины, Мировое древо, небесные знаки и символы подземного мира. Все они передавали древнюю магическую идею плодородия (единства жизни и смерти), благой энергии солнца, воды, растений – всего, что влияло на повседневную жизнь и поэтому требовало ритуального обозначения. Именно в этих сюжетах скрыты древнейшие мировоззренческие коды народа, позволяющие нам заглянуть в его сокровенное прошлое и увидеть истоки этнического мифа.</p>
+				<p>Большое развитие получила в свое время и геометрическая выкладка, и резьба по камню. Самые простые ее орнаментальные формы (в виде солярных крестов, четырехугольников, геометрических моделей Мирового древа) можно наблюдать в архитектуре боевых башен и погребальных склепов. Очень сложны, разнообразны и интересны орнаментальные узоры на надгробных памятниках (цырт). Мастера-камнерезы вплетали в них сложную структуру древней космогонии, в которую вплавлялся орнаментальный знак-образ усопшего. Через сюжеты орнаментированного надгробья зритель узнавал о судьбе погребенного, о его социальном положении, происхождении.</p>
+				<img src="https://fsd.kopilkaurokov.ru/uploads/user_file_54b5a2802df66/mietodichieskoie-posobiie-urokov-mdk-01-01-pm-01-na-tiemu-osietinskii-ornamient_16.png" widht="300"alt />
+				<p>Cолярные знаки встречаются в традиционном осетинском орнаменте. Это не только образ солнечного колеса, но и образ с вегетативными или зооморфными элементами. Солярный герой осетинского эпоса – Сослан, праздник которого проходит в середине лета, погибает от своей же ипостаси – солярного колеса Балсага, в дигорских вариантах эпоса названного «колесом Ойнона». Ж. Дюмезиль не без основания предположил, что наименование колеса несет в себе в трансформированном виде имя св. Иоанна Крестителя, день которого совпадает с высшей точкой лета – солнцестоянием, а праздничным атрибутом у многих индоевропейских христианских народов выступает огненное колесо, спускаемое с горы (символа мира).</p>
+				<img src="https://fsd.kopilkaurokov.ru/uploads/user_file_54b5a2802df66/mietodichieskoie-posobiie-urokov-mdk-01-01-pm-01-na-tiemu-osietinskii-ornamient_21.png" alt >
+				<img src="https://fsd.kopilkaurokov.ru/uploads/user_file_54b5a2802df66/mietodichieskoie-posobiie-urokov-mdk-01-01-pm-01-na-tiemu-osietinskii-ornamient_23.png" alt >
+				<img src="https://fsd.kopilkaurokov.ru/uploads/user_file_54b5a2802df66/mietodichieskoie-posobiie-urokov-mdk-01-01-pm-01-na-tiemu-osietinskii-ornamient_22.png" alt />
+		</div>
+        </div>
+    </section>
+
+    <!-- Три типа орнамента + подробные значения -->
+    <section id="symbols">
+        <div class="container">
+            <h2 class="section-title"> Три вида орнамента и их сакральные знаки</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">📐</div>
+                    <div class="card-content">
+                        <h3>Геометрический</h3>
+						<img src="https://i.pinimg.com/736x/93/bf/5e/93bf5e6a0cd798327cc463930678de0c.jpg" width="250"alt
+                        <p>Точки, линии, круги, ромбы, кресты, спирали. Самый древний тип. Каждая фигура — послание.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌿</div>
+                    <div class="card-content">
+                        <h3>Растительный</h3>
+						<img src="https://fsd.kopilkaurokov.ru/uploads/user_file_54b5a2802df66/mietodichieskoie-posobiie-urokov-mdk-01-01-pm-01-na-tiemu-osietinskii-ornamient_25.png" width="250"alt
+                        <p>Стилизованные листья, цветы, плоды. Чаще всего украшал спинки деревянных кресел и детали интерьера.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🐏</div>
+                    <div class="card-content">
+                        <h3>Зооморфный</h3>
+						<img src="https://fsd.kopilkaurokov.ru/uploads/user_file_54b5a2802df66/mietodichieskoie-posobiie-urokov-mdk-01-01-pm-01-na-tiemu-osietinskii-ornamient_10.png" width="250"alt
+                        <p>Баран, птица, змея, орёл, грифон. Животные — проводники божественных сил.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="text-align:center; margin: 48px 0 24px 0; color:#7b4a2e;">📖 Значение ключевых символов (для работы над керамикой)</h3>
+            <div class="symbol-grid">
+                <div class="symbol-item"><div class="symbol-shape">🔶</div><div class="type-badge"> Геометрия</div><h4>Ромб</h4><p>Плодородие, земля, засеянное поле</p></div>
+                <div class="symbol-item"><div class="symbol-shape">⭕</div><div class="type-badge">Геометрия</div><h4>Круг</h4><p>Солнце, бесконечность мира, цикл жизни</p></div>
+                <div class="symbol-item"><div class="symbol-shape">▲</div><div class="type-badge">Геометрия</div><h4>Треугольник</h4><p>Земное плодородие, достаток, преемственность поколений</p></div>
+                <div class="symbol-item"><div class="symbol-shape">🐏</div><div class="type-badge">Зооморфный</div><h4>Баран</h4><p>Мужское плодородие, созидательная сила, жертва подателю небесных благ</p></div>
+                <div class="symbol-item"><div class="symbol-shape">🐦</div><div class="type-badge">Зооморфный</div><h4>Птица</h4><p>Свет, тепло, весна, посредник между небом и землёй. Атрибут Богини-матери</p></div>
+            </div>
+            <p style="margin-top: 32px; text-align:center; background:#efe0cf; padding:12px; border-radius: 48px;">✨ <strong>Важно для технологии:</strong> в керамике знаки наносились до обжига (ангобом или острой палочкой). Направление свастики на свадебной посуде и на погребальной — различалось, но оба несли очистительный смысл.</p>
+        </div>
+    </section>
+
+    <!-- ПРАКТИЧЕСКАЯ РАБОТА (без интерактивного тренажера) -->
+    <section id="practical">
+        <div class="container">
+            <h2 class="section-title">✋ Практическая работа: создаём эскиз осетинского орнамента</h2>
+            <div class="practical-block">
+                <div class="practical-step">
+                    <h3>📌 Задание для 5–7 классов (урок технологии)</h3>
+                    <p><strong>Цель:</strong> научиться применять традиционные осетинские орнаментальные символы в оформлении керамического изделия.</p>
+                    <p><strong>Этапы выполнения:</strong></p>
+                    <ul class="task-list">
+                        <li>1. Изучи значение символов: ромб (плодородие), круг (солнце), треугольник (достаток), крест-свастика (очистительная сила), баран/птица (по желанию).</li>
+                        <li>2. Выбери форму керамического изделия (кувшин, чаша, тарелка, кружка). Нарисуй её контур на листе бумаги (формат А4 или А5).</li>
+                        <li>3. Продумай композицию: какой символ будет в центре, какие по краям. Помни: в древности каждый знак был оберегом.</li>
+                        <li>4. Нанеси орнамент на эскиз, используя простой карандаш, а затем обведи цветными карандашами/фломастерами (имитация ангоба — терракотовый, чёрный, белый).</li>
+                        <li>5. Подпиши, какие символы ты использовал и что они означают. Придумай название своему сосуду (например, «Чаша солнца», «Кувшин плодородия»).</li>
+                    </ul>
+                </div>
+               
+
+                <div style="margin-top: 24px; background:#fff2e4; border-radius: 28px; padding: 16px;">
+                    <p><strong>🏺 Материалы для урока:</strong> глина или солёное тесто, стеки, ангоб (или гуашь + ПВА), дощечки. Если работаете с глиной — нанеси орнамент до обжига/сушки, как делали древние мастера. Если выполняете только эскиз — используйте плотную бумагу и материалы для росписи.</p>
+                    <p style="margin-top: 12px;"><strong>✏️ Примерное распределение времени:</strong> теория (10 мин), выполнение эскиза (20 мин), анализ и обсуждение (10 мин). Домашнее задание: выполнить лепку небольшой пиалы с орнаментом из солёного теста.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Викторина по тексту -->
+    <section id="quiz">
+        <div class="container">
+            <h2 class="section-title">🧠 Викторина: проверь знание символов</h2>
+            <div class="quiz-block" id="quizContainer">
+                <div class="quiz-question" data-correct="2">
+                    <p>❓ 1. Что символизирует РОМБ в осетинском геометрическом орнаменте?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" data-opt="0">Солнце и бесконечность</button>
+                        <button class="quiz-btn" data-opt="1">Мужское начало</button>
+                        <button class="quiz-btn" data-opt="2">Плодородие, засеянное поле</button>
+                        <button class="quiz-btn" data-opt="3">Подземный мир</button>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                <div class="quiz-question" data-correct="1">
+                    <p>❓ 2. Какое животное в зооморфном орнаменте олицетворяет мужское плодородие и выступает как жертва подателю небесных благ?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" data-opt="0">Орёл</button>
+                        <button class="quiz-btn" data-opt="1">Баран</button>
+                        <button class="quiz-btn" data-opt="2">Змея</button>
+                        <button class="quiz-btn" data-opt="3">Конь</button>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                <div class="quiz-question" data-correct="0">
+                    <p>❓ 3. Крест-свастика с загнутыми концами — это геометрический знак...</p>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" data-opt="0">Движения солнца и очистительной силы</button>
+                        <button class="quiz-btn" data-opt="1">Только военной победы</button>
+                        <button class="quiz-btn" data-opt="2">Печали и траура</button>
+                        <button class="quiz-btn" data-opt="3">Водной стихии</button>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                <div class="quiz-question" data-correct="1">
+                    <p>❓ 4. Назовите древние культуры, к которым восходит осетинский орнамент:</p>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" data-opt="0">Трипольская, Римская</button>
+                        <button class="quiz-btn" data-opt="1">Кобанская, Скифо-Сарматская, Аланская</button>
+                        <button class="quiz-btn" data-opt="2">Византийская, Хазарская</button>
+                        <button class="quiz-btn" data-opt="3">Древнеегипетская</button>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+                <div class="quiz-question" data-correct="0">
+                    <p>❓ 5. Что символизирует птица в осетинском орнаменте?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" data-opt="0">Свет, тепло, весеннее пробуждение, посредник между небом и землёй</button>
+                        <button class="quiz-btn" data-opt="1">Только охоту и войну</button>
+                        <button class="quiz-btn" data-opt="2">Символ смерти</button>
+                        <button class="quiz-btn" data-opt="3">Подземное царство</button>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+            </div>
+            <p style="margin-top: 20px; text-align:center; font-size:0.9rem;">💡 После ответа появится пояснение — так легче запомнить значения для практической работы!</p>
+        </div>
+    </section>
+
+    <!-- Методические рекомендации для учителя технологии -->
+    <section id="teachers">
+        <div class="container">
+            <h2 class="section-title">🍎 Учителю труда (технологии): планирование занятия</h2>
+            <div class="teacher-tips">
+                <h3 style="font-size:1.6rem; margin-bottom: 16px; color:#6A3E24;">📖 Как построить урок по осетинской керамике?</h3>
+                <ul style="list-style-type: none; margin-left: 0;">
+                    <li style="margin-bottom: 12px;">🎯 <strong>Цель:</strong> познакомить учащихся с символикой осетинского орнамента и выполнить эскиз (или лепку) сосуда с сакральными знаками.</li>
+                    <li style="margin-bottom: 12px;">🖌️ <strong>Материалы:</strong> глина/пластилин/солёное тесто, стеки, гуашь (имитация ангоба), кисти, бумага, карандаши.</li>
+                    <li style="margin-bottom: 12px;">📚 <strong>Теоретическая часть (10–12 мин):</strong> рассказ о трёх типах орнамента, значении ромба, круга, треугольника, креста-свастики, барана и птицы. Демонстрация изображений древней керамики.</li>
+                    <li style="margin-bottom: 12px;">✍️ <strong>Практика (20–25 мин):</strong> создание эскиза на бумаге (формат А5) или нанесение узора на заготовку из глины/теста. Обязательное обсуждение: "Какой символ ты выбрал и почему?"</li>
+                    <li style="margin-bottom: 12px;">🧩 <strong>Рефлексия и контроль:</strong> викторина из 5 вопросов (можно в конце урока или на следующем занятии) и мини-выставка работ с комментариями учащихся о значении узоров.</li>
+                    <li style="margin-bottom: 12px;">🏠 <strong>Домашнее задание:</strong> слепить небольшую пиалу или кружку из солёного теста и нанести один из изученных орнаментов (ромб, круг или спираль).</li>
+                </ul>
+                <div style="background: #EBDBC9; border-radius: 28px; padding: 16px; margin-top: 16px;">
+                    <p>✨ <strong>Межпредметная связь:</strong> ИЗО (орнаментальная композиция), история (Кобанская культура, скифо-сарматский период), краеведение. Предложите ученикам создать "сосуд-оберег" для своей семьи, используя символы плодородия и солнца.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>🏺 Осетинская керамика и орнамент — код предков. Урок технологии 5–7 класс</p>
+        <p style="margin-top: 8px; font-size: 0.8rem;">На основе древних символов: ромб (плодородие), круг (солнце), баран (мужское начало), птица (свет).</p>
+        <p style="margin-top: 12px;">✋ Твори, вкладывая смысл в каждый знак!</p>
+    </div>
+</footer>
+
+<script>
+    // Викторина: обработка ответов
+    document.querySelectorAll('.quiz-question').forEach(questionDiv => {
+        const correctIndex = parseInt(questionDiv.getAttribute('data-correct'), 10);
+        const btns = questionDiv.querySelectorAll('.quiz-btn');
+        const feedbackDiv = questionDiv.querySelector('.quiz-feedback');
+        
+        btns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const selectedOpt = parseInt(btn.getAttribute('data-opt'), 10);
+                const isCorrect = (selectedOpt === correctIndex);
+                // Сброс стилей всех кнопок в этом вопросе
+                btns.forEach(b => {
+                    b.style.background = "#f2e3d4";
+                    b.style.color = "#2c2418";
+                });
+                if (isCorrect) {
+                    btn.style.background = "#2c7a7b";
+                    btn.style.color = "white";
+                    feedbackDiv.innerHTML = '<span class="correct-feedback">✅ Верно! Отличное знание символов!</span>';
+                } else {
+                    btn.style.background = "#bc5a2c";
+                    btn.style.color = "white";
+                    let correctText = "";
+                    const idx = Array.from(document.querySelectorAll('.quiz-question')).indexOf(questionDiv);
+                    if(idx === 0) correctText = "Правильный ответ: ромб — символ плодородия, засеянного поля.";
+                    else if(idx === 1) correctText = "Правильный ответ: баран — мужское плодородие, жертва подателю небесных благ.";
+                    else if(idx === 2) correctText = "Правильный ответ: крест-свастика — знак движения солнца и очистительной силы.";
+                    else if(idx === 3) correctText = "Правильный ответ: Кобанская, скифо-сарматская и аланская культуры.";
+                    else correctText = "Правильный ответ: птица символизирует свет, тепло, весеннее пробуждение и связь между небом и землёй.";
+                    feedbackDiv.innerHTML = `<span class="wrong-feedback">❌ Не совсем так. ${correctText} Попробуй следующий вопрос!</span>`;
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
